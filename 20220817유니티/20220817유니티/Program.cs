@@ -110,59 +110,122 @@ namespace _20220817유니티
             // 제어문 (Control Statement)
             // 실행되는 코드 라인을 변경할 수 있는 코드
 
+            //string name = "개굴맨";
+            //int level = 3, hp = 2;
+            //float exp = 0.5f;
+
+
+            //hp = 5;
+            //if (hp < 3) //hp 가 2이기 때문에 True 이기때문에 아래코드 실행됨. 범위실행
+            //{
+            //    Console.WriteLine("HP 가 부족합니다!"); // (hp <3) True 일때 실행되는 코드
+            //}
+            //else if (hp < 10)
+            //{
+            //    Console.WriteLine("HP 가 적당합니다!"); // (hp < 3) 와 (hp < 10) 가 거짓일때 실행되는 코드
+            //}
+            //else
+            //{
+            //    Console.WriteLine("HP 가 충분합니다!"); //(hp < 3) 와 ( hp < 10) 이 False 일때 실행되는 코드
+            //}
+
+            //switch(hp) // 정해진 케이스는 switch , 실행속도가 더 빠름
+            //{
+            //    case 0:
+            //        Console.WriteLine("HP 가 0입니다");
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("HP 가 5입니다");
+            //        break;
+            //    default:
+            //        Console.WriteLine("HP 가 0과 5가 아닙니다");
+            //        break;
+            //}
+
+            //Console.WriteLine("경험치를 추가합니다.");
+            //Console.Write("추가할 경험치 : ");
+            //string temp = Console.ReadLine();
+
+            ////실습: exp의 값과 추가로 입력받은 경험치의 합이 1 이상이면 "레벨업" 이라고 출력하고 1 미만이면 현재 경험치의 합계를 출력하는 코드 작성하기
+
+            //float tempExp;
+            //float.TryParse(temp, out tempExp);
+            //if ((exp + tempExp) > 1 )
+            //{
+            //    Console.WriteLine("레벨업");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"현재 경험치{exp + tempExp}");
+            //}
+
+
+            //반복문
+
+            //string name = "개굴맨";
+            //int level = 3, hp = 2;
+            //float exp = 0.5f;
+
+            //level = 1;
+            //while(level > 3) // 소괄호 안의 조건이 참이면 중괄호 {} 사이의 코드를 반복 실행 한다
+            //{
+            //    Console.WriteLine($"현재 레벨은 : {level}");
+            //    level = level++; // level ++ = level + 1   //   level += 1   //  셋다 같은 코드
+            //}
+
+            ////level += 2 ; // level 에다가 2를 더해서 레벨에 넣어라
+
+            //hp = 10;
+            //for (int i=0; i<3; i++) // i 는 0 에서 시작해서 3 보다 작으면 계속 {} 사이를 실행해라. 한번 실행할때마다 i 가 1 씩 증가한다
+            //{
+            //    Console.WriteLine($"현재 HP : {hp}");
+            //    hp += 10;
+            //}
+
+            //Console.WriteLine($"현재 HP : {hp}");
+
+            //level = 1;
+            //do
+            //{
+            //    Console.WriteLine($"현재 레벨 : {level} ");
+            //    if ( level == 2 )
+            //    {
+            //        break;
+            //    }
+            //    level++;
+
+            //} while (level < 3);
+
+            //Console.WriteLine($"최종 Level : {level} ");
+
+            //실습 : exp 가 1을 넘어 레벨업을 할때까지 계속 추가경험치를 입력하도록 하는 코드 작성하기
+
             string name = "개굴맨";
             int level = 3, hp = 2;
             float exp = 0.5f;
+
+            exp = 0.0f;
+            Console.WriteLine($"현재 경험치 : {exp}");
+
+            while (1.0f > exp)
+            {
+                Console.WriteLine("경험치를 추가 해야합니다.");
+                Console.Write("추가할 경험치 : ");
+                string temp = Console.ReadLine();
+                float tempFloat = 0.0f;
+                float.TryParse(temp, out tempFloat);
+
+                exp += tempFloat;
+
+                if (1.0f > exp)
+                {
+                    Console.WriteLine($"\n현재 경험치 : {exp}");
+                }
+            }
+
+            Console.WriteLine("레벨업");
+
             
-            hp = 5;
-            if (hp < 3) //hp 가 2이기 때문에 True 이기때문에 아래코드 실행됨. 범위실행
-            {
-                Console.WriteLine("HP 가 부족합니다!"); // (hp <3) True 일때 실행되는 코드
-            }
-            else if (hp < 10)
-            {
-                Console.WriteLine("HP 가 적당합니다!"); // (hp < 3) 와 (hp < 10) 가 거짓일때 실행되는 코드
-            }
-            else
-            {
-                Console.WriteLine("HP 가 충분합니다!"); //(hp < 3) 와 ( hp < 10) 이 False 일때 실행되는 코드
-            }
-
-            switch(hp) // 정해진 케이스는 switch , 실행속도가 더 빠름
-            {
-                case 0:
-                    Console.WriteLine("HP 가 0입니다");
-                    break;
-                case 5:
-                    Console.WriteLine("HP 가 5입니다");
-                    break;
-                default:
-                    Console.WriteLine("HP 가 0과 5가 아닙니다");
-                    break;
-            }
-
-            Console.WriteLine("경험치를 추가합니다.");
-            Console.Write("추가할 경험치 : ");
-            string temp = Console.ReadLine();
-
-            //실습: exp의 값과 추가로 입력받은 경험치의 합이 1 이상이면 "레벨업" 이라고 출력하고 1 미만이면 현재 경험치의 합계를 출력하는 코드 작성하기
-
-            float tempExp;
-            float.TryParse(temp, out tempExp);
-            if ((exp + tempExp) > 1 )
-            {
-                Console.WriteLine("레벨업");
-            }
-            else
-            {
-                Console.WriteLine($"현재 경험치{exp + tempExp}");
-            }
-
-
-
-
-
-
 
             Console.ReadKey(); //키 입력 대기하는 코드
         }
