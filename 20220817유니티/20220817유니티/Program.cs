@@ -82,30 +82,90 @@ namespace _20220817유니티
 
             //이름, 레벨, hp, 경험치 각각 입력받고 출력하는 코드 만들기
 
-            string name ;
-            int level, hp;
-            float exp;
-            string read = Console.ReadLine();
+            //string name = "개굴맨";
+            //int level = 3, hp = 2;
+            //float exp = 0.5f;
+            //string read = Console.ReadLine();
 
-            Console.Write("이름을 입력하세요 : ");
-            name = Console.ReadLine();
+            //Console.Write("이름을 입력하세요 : ");
+            //name = Console.ReadLine();
 
-            Console.Write($"{name}의 레벨을 입력하세요 : ");
-            read = Console.ReadLine();
-            int.TryParse(read, out level);
-                        
-            Console.Write($"{name}의 HP를 입력하세요 : ");
-            read = Console.ReadLine();
-            int.TryParse(read, out hp);
+            //Console.Write($"{name}의 레벨을 입력하세요 : ");
+            //read = Console.ReadLine();
+            //int.TryParse(read, out level);
+
+            //Console.Write($"{name}의 HP를 입력하세요 : ");
+            //read = Console.ReadLine();
+            //int.TryParse(read, out hp);
+
+            //Console.Write($"{name}의 EXP를 입력하세요 : ");
+            //read = Console.ReadLine();
+            //float.TryParse(read, out exp);
+
+            //string result = ($"이름 : {name}\n레벨 : {level}\nHP : {hp}\nEXP : {exp*100:F2}");
+            //Console.WriteLine(result);
+
+            //변수 끝~~~~~~~~~~~~~~~~
+
+            // 제어문 (Control Statement)
+            // 실행되는 코드 라인을 변경할 수 있는 코드
+
+            string name = "개굴맨";
+            int level = 3, hp = 2;
+            float exp = 0.5f;
             
-            Console.Write($"{name}의 EXP를 입력하세요 : ");
-            read = Console.ReadLine();
-            float.TryParse(read, out exp);
-            
-            string result = ($"이름 : {name}\n레벨 : {level}\nHP : {hp}\nEXP : {exp*100:F2}");
-            Console.WriteLine(result);
+            hp = 5;
+            if (hp < 3) //hp 가 2이기 때문에 True 이기때문에 아래코드 실행됨. 범위실행
+            {
+                Console.WriteLine("HP 가 부족합니다!"); // (hp <3) True 일때 실행되는 코드
+            }
+            else if (hp < 10)
+            {
+                Console.WriteLine("HP 가 적당합니다!"); // (hp < 3) 와 (hp < 10) 가 거짓일때 실행되는 코드
+            }
+            else
+            {
+                Console.WriteLine("HP 가 충분합니다!"); //(hp < 3) 와 ( hp < 10) 이 False 일때 실행되는 코드
+            }
+
+            switch(hp) // 정해진 케이스는 switch , 실행속도가 더 빠름
+            {
+                case 0:
+                    Console.WriteLine("HP 가 0입니다");
+                    break;
+                case 5:
+                    Console.WriteLine("HP 가 5입니다");
+                    break;
+                default:
+                    Console.WriteLine("HP 가 0과 5가 아닙니다");
+                    break;
+            }
+
+            Console.WriteLine("경험치를 추가합니다.");
+            Console.Write("추가할 경험치 : ");
+            string temp = Console.ReadLine();
+
+            //실습: exp의 값과 추가로 입력받은 경험치의 합이 1 이상이면 "레벨업" 이라고 출력하고 1 미만이면 현재 경험치의 합계를 출력하는 코드 작성하기
+
+            float tempExp;
+            float.TryParse(temp, out tempExp);
+            if ((exp + tempExp) > 1 )
+            {
+                Console.WriteLine("레벨업");
+            }
+            else
+            {
+                Console.WriteLine($"현재 경험치{exp + tempExp}");
+            }
+
+
+
+
+
+
 
             Console.ReadKey(); //키 입력 대기하는 코드
         }
+
     }
 }
