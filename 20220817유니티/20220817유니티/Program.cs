@@ -10,6 +10,60 @@ namespace _20220817유니티
     {
         static void Main(string[] args)
         {
+            int sumResult = Sum(10,20); //break point (단축키 F9)
+            Console.WriteLine($"Sum Result : {sumResult}\n");
+            Console.ReadKey();
+
+            Print();
+            Console.ReadKey();
+
+            string name = "너굴맨";
+            int level = 2;
+            int hp = 10;
+            int maxHP = 20;
+            float exp = 0.1f;
+            float maxEXP = 1.0f;
+
+            PrintCharacter("너굴맨", 2,10,20,0.1f,1.0f);
+            Console.ReadKey();
+            
+        }
+
+
+        //함수의 구성요소
+        // 이름 : 함수를 구분하기 위한 이름 (예제의 Sum)
+        // 리턴 타입: 함수의 실행결과로 돌려주는 데이터의 타입 (int, 함수의 이름 앞에 표시된다.)
+        // 파라메터 (매개변수) : 함수가 실행될 때 외부에서 받는 값 (int a & int b, 2개의 매개변수가 있다.)
+        // 함수바디 : 함수가 호출될 때 실행될 코드들  (222 ~ 225 라인)
+
+        // 함수의 이름, 리턴타입, 파라메터를 합쳐서 함수 프로토타입. 절대로 하나의 프로그램 안에서 겸치지 않는다.
+        static int Sum(int a, int b)
+        {
+            int result = a + b;
+
+
+            return result;
+        }
+
+        static void PrintCharacter(string name, int level, int hp, int maxHP, float exp, float maxEXP)
+        {
+            
+            Console.WriteLine($"이름 : {name}");
+            Console.WriteLine($"레벨 : {level}");
+            Console.WriteLine($"HP : {hp}");
+            Console.WriteLine($"maxHP : {maxHP}");
+            Console.WriteLine($"exp : {exp}");
+            Console.WriteLine($"maxEXP : {maxEXP}");
+                       
+        }
+
+        static void Print() // 리턴해주는 값이 없고, 파라메터도 없는경우
+        {
+            Console.WriteLine("Print\n");
+        }
+
+        void Test()
+        {
             Console.WriteLine("Hello World");
             Console.WriteLine("최성준"); //출력 
             //string str = Console.ReadLine(); // 키보드입력을 받아서 str 이라는 string 변수에 저장한다.
@@ -212,6 +266,7 @@ namespace _20220817유니티
                 Console.WriteLine("경험치를 추가 해야합니다.");
                 Console.Write("추가할 경험치 : ");
                 string temp = Console.ReadLine();
+
                 float tempFloat = 0.0f;
                 float.TryParse(temp, out tempFloat);
 
@@ -223,12 +278,15 @@ namespace _20220817유니티
                 }
             }
 
-            Console.WriteLine("레벨업");
+            Console.WriteLine("\n레벨업");
 
-            
+
+
+
 
             Console.ReadKey(); //키 입력 대기하는 코드
         }
-
     }
+
+    
 }
