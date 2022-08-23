@@ -1,0 +1,8 @@
+C:\Users\sjxch\OneDrive\문서\GitHub\Repository\test\Practice0818\Practice0818\bin\Debug\Practice0818.exe.config
+C:\Users\sjxch\OneDrive\문서\GitHub\Repository\test\Practice0818\Practice0818\bin\Debug\Practice0818.exe
+C:\Users\sjxch\OneDrive\문서\GitHub\Repository\test\Practice0818\Practice0818\bin\Debug\Practice0818.pdb
+C:\Users\sjxch\OneDrive\문서\GitHub\Repository\test\Practice0818\Practice0818\obj\Debug\Practice0818.csproj.AssemblyReference.cache
+C:\Users\sjxch\OneDrive\문서\GitHub\Repository\test\Practice0818\Practice0818\obj\Debug\Practice0818.csproj.SuggestedBindingRedirects.cache
+C:\Users\sjxch\OneDrive\문서\GitHub\Repository\test\Practice0818\Practice0818\obj\Debug\Practice0818.csproj.CoreCompileInputs.cache
+C:\Users\sjxch\OneDrive\문서\GitHub\Repository\test\Practice0818\Practice0818\obj\Debug\Practice0818.exe
+C:\Users\sjxch\OneDrive\문서\GitHub\Repository\test\Practice0818\Practice0818\obj\Debug\Practice0818.pdb

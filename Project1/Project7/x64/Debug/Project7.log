@@ -1,0 +1,2 @@
+﻿  소스.cpp
+C:\Users\sjxch\OneDrive\문서\GitHub\Repository\test\Project1\Project7\소스.cpp(34): error C4700: 초기화되지 않은 'b' 지역 변수를 사용했습니다.

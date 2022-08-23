@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Human.cs" />
+    <Compile Include="Interaction.cs" />
+    <Compile Include="Orc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs" />
+    <Compile Include="Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
