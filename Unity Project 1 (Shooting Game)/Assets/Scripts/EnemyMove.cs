@@ -8,8 +8,6 @@ public class EnemyMove : MonoBehaviour
 
     public GameObject Enemy;
 
-   
-
     Vector3 dir;
 
     // Start is called before the first frame update
@@ -21,7 +19,7 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime * Vector3.left);
+        transform.Translate(speed * Time.deltaTime * Vector3.left, Space.World);
 
     }
 
